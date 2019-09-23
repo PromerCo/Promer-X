@@ -3,10 +3,50 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Url;
 use yii\captcha\Captcha;
 ?>
-
+<style>
+    /** Logo in*/
+    .login-page, .register-page {
+        background: #000000;
+    }
+    .login-logo a, .register-logo a {
+        color: #fff;
+    }
+    .login-box-body, .register-box-body {
+        background: #000;
+        padding: 20px;
+        border-top: 0;
+        color: #fff;
+    }
+    .btn-primary {
+        background-color: #000000;
+        border-color: #ffffff;
+    }
+    .btn-primary {
+        background-color: #000000;
+        border-color: #ffffff;
+    }
+    .btn-primary:hover, .btn-primary:active, .btn-primary.hover {
+        background-color: #ffffff;
+    }
+    .btn-primary:hover {
+        color: #000;
+        background-color: #ffffff;
+        border-color: #ffffff;
+    }
+    .form-control {
+        border-radius: 0;
+        box-shadow: none;
+        border-color: #ffffff;
+    }
+    .btn-primary.focus, .btn-primary:focus {
+        color: #fff;
+        background-color: #000000;
+        border-color: #ffffff;
+    }
+</style>
 <div class="login-box">
   <div class="login-logo">
-    <a href="<?=Url::toRoute('site/login')?>"><b>Hub KOL</b>Sys</a>
+    <a href="<?=Url::toRoute('site/login')?>"><b>Promer X</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
