@@ -148,7 +148,7 @@ if($otherMenu == false){
 <?= $this->blocks['header'] ?>
 <?php endif;?>
 </head>
-<body class="sidebar-mini skin-red sidebar-collapse">
+<body class="sidebar-mini skin-red">
 <div class="modal fade" id="confirm_dialog" tabindex="-1" role="dialog"
 	aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">

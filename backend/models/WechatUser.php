@@ -69,7 +69,7 @@ class WechatUser extends \backend\models\BaseModel
             'language' => '语言',
             'country_code' => '国家区号',
             'phone_number' => '加区手机号',
-            'capacity' => '用户的身份  0：资料未填写  1:HUB  2KOL',
+            'capacity' => '用户的身份',
             'pure_phone_number' => '无区手机号',
             'create_time' => '创建时间',
             'update_time' => '更新时间',
