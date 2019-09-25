@@ -10,3 +10,42 @@ Stack trace:
 #0 E:\Hub\Preomer\Pro\HubKOL-Sys\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
 #1 E:\Hub\Preomer\Pro\HubKOL-Sys\backend\web\index.php(16): yii\base\Application->run()
 #2 {main}
+2019-09-24 04:14:29 [127.0.0.1][156][l5ktmvv4jlav014hp2998egaj1][error][yii\base\ErrorException:8] yii\base\ErrorException: Use of undefined constant querys - assumed 'querys' in C:\Users\Arvin\Hub\Pro\Promer-X\backend\controllers\WechatUserController.php:28
+Stack trace:
+#0 C:\Users\Arvin\Hub\Pro\Promer-X\backend\controllers\WechatUserController.php(28): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', 'C:\\Users\\Arvin\\...', 28, Array)
+#1 [internal function]: backend\controllers\WechatUserController->actionIndex()
+#2 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#5 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('wechat-user/ind...', Array)
+#6 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Users\Arvin\Hub\Pro\Promer-X\backend\web\index.php(16): yii\base\Application->run()
+#8 {main}
+2019-09-24 10:37:11 [127.0.0.1][156][21hq7stv6rg0c9hc92s2jev4s3][error][ParseError] ParseError: syntax error, unexpected '}', expecting ',' or ';' in C:\Users\Arvin\Hub\Pro\Promer-X\backend\views\wechat-user\index.php:99
+Stack trace:
+#0 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Users\\Arvin\\...', Array)
+#1 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Users\\Arvin\\...', Array, Object(backend\controllers\WechatUserController))
+#2 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\WechatUserController))
+#3 C:\Users\Arvin\Hub\Pro\Promer-X\backend\controllers\WechatUserController.php(68): yii\base\Controller->render('index', Array)
+#4 [internal function]: backend\controllers\WechatUserController->actionIndex()
+#5 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('wechat-user/ind...', Array)
+#9 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\Users\Arvin\Hub\Pro\Promer-X\backend\web\index.php(16): yii\base\Application->run()
+#11 {main}
+2019-09-24 17:15:04 [127.0.0.1][156][21hq7stv6rg0c9hc92s2jev4s3][error][ParseError] ParseError: syntax error, unexpected '}', expecting ',' or ';' in C:\Users\Arvin\Hub\Pro\Promer-X\backend\views\wechat-user\index.php:99
+Stack trace:
+#0 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\Users\\Arvin\\...', Array)
+#1 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\Users\\Arvin\\...', Array, Object(backend\controllers\WechatUserController))
+#2 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(backend\controllers\WechatUserController))
+#3 C:\Users\Arvin\Hub\Pro\Promer-X\backend\controllers\WechatUserController.php(68): yii\base\Controller->render('index', Array)
+#4 [internal function]: backend\controllers\WechatUserController->actionIndex()
+#5 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('wechat-user/ind...', Array)
+#9 C:\Users\Arvin\Hub\Pro\Promer-X\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\Users\Arvin\Hub\Pro\Promer-X\backend\web\index.php(16): yii\base\Application->run()
+#11 {main}
