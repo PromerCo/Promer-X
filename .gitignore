@@ -1,2 +1,7 @@
+/.idea
+/backend/runtime
+/frontend/runtime
 /vendor
 /mhubkol
+backend/web/nginx.htaccess
+frontend/web/nginx.htaccess
