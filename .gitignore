@@ -1,7 +1,11 @@
 /.idea
+/common/config
+/backend/config
+/frontend/config
 /backend/runtime
 /frontend/runtime
-/vendor
-/mhubkol
 backend/web/nginx.htaccess
 frontend/web/nginx.htaccess
+/vendor
+/mhubkol
+/mcastingpin
