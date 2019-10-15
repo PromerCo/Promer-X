@@ -4,26 +4,26 @@ namespace backend\controllers;
 
 use Yii;
 use yii\data\Pagination;
-use backend\models\WechatUser;
+use backend\models\HubKolUser;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * WechatUserController implements the CRUD actions for WechatUser model.
+ * HubKolUserController implements the CRUD actions for HubKolUser model.
  */
-class WechatUserController extends BaseController
+class HubKolUserController extends BaseController
 {
 	public $layout = "lte_main";
 
     /**
-     * Lists all WechatUser models.
+     * Lists all HubKolUser models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $query = WechatUser::find();
+        $query = HubKolUser::find();
          $querys = Yii::$app->request->get('query');
         if(empty($querys)== false && count($querys) > 0){
             $condition = "";
@@ -70,7 +70,7 @@ class WechatUserController extends BaseController
     }
 
     /**
-     * Displays a single WechatUser model.
+     * Displays a single HubKolUser model.
      * @param integer $id
      * @return mixed
      */
@@ -85,13 +85,13 @@ class WechatUserController extends BaseController
     }
 
     /**
-     * Creates a new WechatUser model.
+     * Creates a new HubKolUser model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new WechatUser();
+        $model = new HubKolUser();
         if ($model->load(Yii::$app->request->post())) {
         
               if(empty($model->create_time) == true){
@@ -116,7 +116,7 @@ class WechatUserController extends BaseController
     }
 
     /**
-     * Updates an existing WechatUser model.
+     * Updates an existing HubKolUser model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -151,7 +151,7 @@ class WechatUserController extends BaseController
     }
 
     /**
-     * Deletes an existing WechatUser model.
+     * Deletes an existing HubKolUser model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -159,7 +159,7 @@ class WechatUserController extends BaseController
     public function actionDelete(array $ids)
     {
         if(count($ids) > 0){
-            $c = WechatUser::deleteAll(['in', 'id', $ids]);
+            $c = HubKolUser::deleteAll(['in', 'id', $ids]);
             return $this->asJson(array('errno'=>0, 'data'=>$c, 'msg'=>json_encode($ids)));
         }
         else{
@@ -171,15 +171,15 @@ class WechatUserController extends BaseController
 	 
 
     /**
-     * Finds the WechatUser model based on its primary key value.
+     * Finds the HubKolUser model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return WechatUser the loaded model
+     * @return HubKolUser the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = WechatUser::findOne($id)) !== null) {
+        if (($model = HubKolUser::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

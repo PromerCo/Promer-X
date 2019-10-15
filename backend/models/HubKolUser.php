@@ -4,7 +4,7 @@ namespace backend\models;
 use Yii;
 
 /**
- * This is the model class for table "wechat_user".
+ * This is the model class for table "hubkol_user".
  *
  * @property integer $id
  * @property string $union_id
@@ -23,14 +23,14 @@ use Yii;
  * @property string $create_time
  * @property string $update_time
  */
-class WechatUser extends \backend\models\BaseModel
+class HubKolUser extends \backend\models\BaseModel
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'wechat_user';
+        return 'hubkol_user';
     }
 
     /**

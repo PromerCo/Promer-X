@@ -6,9 +6,9 @@ use yii\bootstrap\ActiveForm;
 use common\utils\CommonFun;
 use yii\helpers\Url;
 
-use backend\models\WechatUser;
+use backend\models\HubKolUser;
 
-$modelLabel = new \backend\models\WechatUser();
+$modelLabel = new \backend\models\HubKolUser();
 ?>
 
 <?php $this->beginBlock('header');  ?>
@@ -181,7 +181,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="union_id_div" class="form-group">
               <label for="union_id" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("union_id")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="union_id" name="WechatUser[union_id]" placeholder="" />
+                  <input type="text" class="form-control" id="union_id" name="HubKolUser[union_id]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -189,7 +189,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="open_id_div" class="form-group">
               <label for="open_id" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("open_id")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="open_id" name="WechatUser[open_id]" placeholder="" />
+                  <input type="text" class="form-control" id="open_id" name="HubKolUser[open_id]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -197,7 +197,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="nick_name_div" class="form-group">
               <label for="nick_name" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("nick_name")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="nick_name" name="WechatUser[nick_name]" placeholder="" />
+                  <input type="text" class="form-control" id="nick_name" name="HubKolUser[nick_name]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -205,7 +205,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="avatar_url_div" class="form-group">
               <label for="avatar_url" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("avatar_url")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="avatar_url" name="WechatUser[avatar_url]" placeholder="" />
+                  <input type="text" class="form-control" id="avatar_url" name="HubKolUser[avatar_url]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -213,7 +213,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="gender_div" class="form-group">
               <label for="gender" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("gender")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="gender" name="WechatUser[gender]" placeholder="" />
+                  <input type="text" class="form-control" id="gender" name="HubKolUser[gender]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -221,7 +221,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="province_div" class="form-group">
               <label for="province" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("province")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="province" name="WechatUser[province]" placeholder="" />
+                  <input type="text" class="form-control" id="province" name="HubKolUser[province]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -229,7 +229,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="city_div" class="form-group">
               <label for="city" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("city")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="city" name="WechatUser[city]" placeholder="" />
+                  <input type="text" class="form-control" id="city" name="HubKolUser[city]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -237,7 +237,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="country_div" class="form-group">
               <label for="country" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("country")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="country" name="WechatUser[country]" placeholder="" />
+                  <input type="text" class="form-control" id="country" name="HubKolUser[country]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -245,7 +245,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="language_div" class="form-group">
               <label for="language" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("language")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="language" name="WechatUser[language]" placeholder="" />
+                  <input type="text" class="form-control" id="language" name="HubKolUser[language]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -253,7 +253,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="country_code_div" class="form-group">
               <label for="country_code" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("country_code")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="country_code" name="WechatUser[country_code]" placeholder="" />
+                  <input type="text" class="form-control" id="country_code" name="HubKolUser[country_code]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -261,7 +261,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="phone_number_div" class="form-group">
               <label for="phone_number" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("phone_number")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="phone_number" name="WechatUser[phone_number]" placeholder="" />
+                  <input type="text" class="form-control" id="phone_number" name="HubKolUser[phone_number]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -269,7 +269,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="capacity_div" class="form-group">
               <label for="capacity" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("capacity")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="capacity" name="WechatUser[capacity]" placeholder="" />
+                  <input type="text" class="form-control" id="capacity" name="HubKolUser[capacity]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -277,7 +277,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="pure_phone_number_div" class="form-group">
               <label for="pure_phone_number" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("pure_phone_number")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="pure_phone_number" name="WechatUser[pure_phone_number]" placeholder="" />
+                  <input type="text" class="form-control" id="pure_phone_number" name="HubKolUser[pure_phone_number]" placeholder="" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -285,7 +285,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="create_time_div" class="form-group">
               <label for="create_time" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("create_time")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="create_time" name="WechatUser[create_time]" placeholder="必填" />
+                  <input type="text" class="form-control" id="create_time" name="HubKolUser[create_time]" placeholder="必填" />
               </div>
               <div class="clearfix"></div>
           </div>
@@ -293,7 +293,7 @@ $modelLabel = new \backend\models\WechatUser();
           <div id="update_time_div" class="form-group">
               <label for="update_time" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("update_time")?></label>
               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="update_time" name="WechatUser[update_time]" placeholder="必填" />
+                  <input type="text" class="form-control" id="update_time" name="HubKolUser[update_time]" placeholder="必填" />
               </div>
               <div class="clearfix"></div>
           </div>
