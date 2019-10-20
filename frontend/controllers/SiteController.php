@@ -66,8 +66,12 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($lang = null)
     {
+        if ($lang == 'en') {
+          return $this->render('index-en');
+        }
+
         return $this->render('index');
     }
 
