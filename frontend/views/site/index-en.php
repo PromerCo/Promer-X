@@ -126,7 +126,7 @@
                                       <li>
                                           <p><i class="fa fa-forumbee"></i></p>
                                           <p class="brand">PRO Index</p>
-                                          <p class="word">Personality - Business Value</p>
+                                          <p class="word">Marketing - Business Guide</p>
                                       </li>
 
                                   </ul>
@@ -161,7 +161,7 @@
                                         <li>
                                             <p><i class="fa fa-modx"></i></p>
                                             <p class="brand">Image Transmission</p>
-                                            <p class="word">Open a new exploration of intelligent marketing communication</p>
+                                            <p class="word">Open a new channel for intelligent marketing communication</p>
                                         </li>
                                         <li>
                                             <p><i class="fa fa-connectdevelop "></i></p>
@@ -239,8 +239,8 @@
                                 <div class="divider animated" data-animation="fadeInUp" data-animation-delay="200">
                                     <span></span></div>
                                 <div class="animated" data-animation="fadeInUp" data-animation-delay="400">
-                                    <p>Promer Culture Media「Every germination comes from the innovation of the times」</p>
-                                    <p>Founded in 2019, based in Beijing, China, it has gathered a group of seniors in the Internet, film and television, and media industries.</p>
+                                    <p>「Every germination comes from the innovation of the times」</p>
+                                    <p>Promer Culture Media Founded in 2019, based in Beijing, China, it has gathered a group of seniors in the Internet, film and television, and media industries.</p>
                                     <p>Taking Internet entertainment as an opportunity, we are committed to building a “new entertainment” ecosystem service to realize new entertainment formats, from IP precision, production intelligence, communication aggregation, data assetization, and chain efficiency tools to help upgrade.</p>
                                 </div>
                             </div>
@@ -266,7 +266,7 @@
             </nav>
         </div>
         <div class="container copyright-container">
-            <p>© 2019 Promer.co All Rights Reserved.</p>
+            <p>© <?=date('Y');?> Promer.co All Rights Reserved.</p>
         </div>
     </footer>
 </body>

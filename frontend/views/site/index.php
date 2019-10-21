@@ -126,7 +126,7 @@
                                       <li>
                                           <p><i class="fa fa-forumbee"></i></p>
                                           <p class="brand">普数指数</p>
-                                          <p class="word">人品 - 商业价值</p>
+                                          <p class="word">营销 - 商业指南</p>
                                       </li>
 
                                   </ul>
@@ -161,7 +161,7 @@
                                         <li>
                                             <p><i class="fa fa-modx"></i></p>
                                             <p class="brand">聚像传播</p>
-                                            <p class="word">开启智能化营销传播新探索</p>
+                                            <p class="word">开启智能化营销传播新渠道</p>
                                         </li>
                                         <li>
                                             <p><i class="fa fa-connectdevelop "></i></p>
@@ -239,8 +239,8 @@
                                 <div class="divider animated" data-animation="fadeInUp" data-animation-delay="200">
                                     <span></span></div>
                                 <div class="animated" data-animation="fadeInUp" data-animation-delay="400">
-                                    <p>普罗米文化传媒「每一次萌芽都源于时代灵感涌现的创新」</p>
-                                    <p>成立于2019年，立足于北京，汇聚了国内一线的互联网、影视、传媒行业的资深人士。</p>
+                                    <p>「每一次萌芽都源于时代灵感涌现的创新」</p>
+                                    <p>普罗米文化传媒成立于2019年，立足于北京，汇聚国内一线的互联网、影视、传媒行业资深人士。</p>
                                     <p>以互联网文娱为契机，致力于构建“新文娱”生态圈服务，实现文娱新业态，从IP精准化、制作智能化、传播聚像化、数据资产化、链条效率工具助力全面升级。</p>
                                 </div>
                             </div>
@@ -268,7 +268,7 @@
             </nav>
         </div>
         <div class="container copyright-container">
-            <p>© 2019 Promer.co All Rights Reserved.</p>
+            <p>© <?=date('Y');?> Promer.co All Rights Reserved.</p>
         </div>
     </footer>
 </body>
