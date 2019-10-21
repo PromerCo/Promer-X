@@ -68,6 +68,8 @@ class SiteController extends Controller
      */
     public function actionIndex($lang = null)
     {
+        $lang = empty($lang) ? $this->get_lang() : $lang;
+
         if ($lang == 'en') {
           return $this->render('index-en');
         }
@@ -75,5 +77,23 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+
+  	function get_lang() {
+  		if(!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])){
+  			$lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+     			 $lang = substr($lang,0,5);
+      		if(preg_match("/zh-cn/i",$lang)){
+       			$lang = "zh-cn";
+      		}elseif(preg_match("/zh/i",$lang)){
+       			$lang = "zh-cn";
+      		}else{
+         		 	$lang = "en";
+      		}
+      		return $lang;
+     		}else{
+          $lang = "en";
+     			return $lang;
+     		}
+    }
 
 }
