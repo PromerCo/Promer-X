@@ -1,7 +1,7 @@
 
 <?php
 use yii\widgets\LinkPager;
-use yii\base\Object;
+// use yii\base\Object;
 use yii\bootstrap\ActiveForm;
 use backend\models\AdminRight;
 use yii\helpers\Url;
@@ -17,7 +17,7 @@ $modelLabel = new \backend\models\AdminRight();
   <div class="row">
     <div class="col-xs-12">
       <div class="box">
-      
+
         <div class="box-header">
           <h3 class="box-title">路由管理</h3>
           <div class="box-tools">
@@ -29,14 +29,14 @@ $modelLabel = new \backend\models\AdminRight();
           </div>
         </div>
         <!-- /.box-header -->
-        
+
         <div class="box-body">
           <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
             <!-- row start search-->
           	<div class="row">
           	<div class="col-sm-12">
-                <?php ActiveForm::begin(['id' => 'admin-right-search-form', 'method'=>'get', 'options' => ['class' => 'form-inline'], 'action'=>Url::toRoute('admin-right/index')]); ?>     
-                
+                <?php ActiveForm::begin(['id' => 'admin-right-search-form', 'method'=>'get', 'options' => ['class' => 'form-inline'], 'action'=>Url::toRoute('admin-right/index')]); ?>
+
                   <div class="form-group" style="margin: 5px;">
                       <label><?=$modelLabel->getAttributeLabel('id')?>:</label>
                       <input type="text" class="form-control" id="query[id]" name="query[id]"  value="<?=isset($query["id"]) ? $query["id"] : "" ?>">
@@ -44,19 +44,19 @@ $modelLabel = new \backend\models\AdminRight();
               <div class="form-group">
               	<a onclick="searchAction()" class="btn btn-primary btn-sm" href="#"> <i class="glyphicon glyphicon-zoom-in icon-white"></i>搜索</a>
            	  </div>
-               <?php ActiveForm::end(); ?> 
+               <?php ActiveForm::end(); ?>
             </div>
           	</div>
           	<!-- row end search -->
-          	
+
           	<!-- row start -->
           	<div class="row">
           	<div class="col-sm-12">
           	<table id="data_table" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="data_table_info">
             <thead>
             <tr role="row">
-            
-            <?php 
+
+            <?php
 		      echo '<th><input id="data_table_check" type="checkbox"></th>';
               echo '<th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('id').'</th>';
 //               echo '<th class="sorting" tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('menu_id').'</th>';
@@ -66,14 +66,14 @@ $modelLabel = new \backend\models\AdminRight();
               echo '<th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('display_order').'</th>';
               echo '<th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('update_user').'</th>';
               echo '<th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('update_date').'</th>';
-         
+
 			?>
-	
+
             <th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >操作</th>
             </tr>
             </thead>
             <tbody>
-            
+
             <?php
             $row = 0;
             foreach ($models as $model) {
@@ -97,18 +97,18 @@ $modelLabel = new \backend\models\AdminRight();
                 echo '  </td>';
                 echo '<tr/>';
             }
-            
+
             ?>
-            
-           
-           
+
+
+
             </tbody>
             <!-- <tfoot></tfoot> -->
           </table>
           </div>
           </div>
           <!-- row end -->
-          
+
           <!-- row start -->
           <div class="row">
           	<div class="col-sm-5">
@@ -125,8 +125,8 @@ $modelLabel = new \backend\models\AdminRight();
               	    'prevPageLabel' => '上一页',
               	    'firstPageLabel' => '首页',
               	    'lastPageLabel' => '尾页',
-              	]); ?>	
-              	
+              	]); ?>
+
               	</div>
           	</div>
 		  </div>
@@ -152,11 +152,11 @@ $modelLabel = new \backend\models\AdminRight();
 				<h3>路由管理</h3>
 			</div>
 			<div class="modal-body">
-                <?php $form = ActiveForm::begin(["id" => "admin-right-form", "class"=>"form-horizontal", "action"=>Url::toRoute('admin-right/save')]); ?>                      
-                 
+                <?php $form = ActiveForm::begin(["id" => "admin-right-form", "class"=>"form-horizontal", "action"=>Url::toRoute('admin-right/save')]); ?>
+
                  <input type="hidden" class="form-control" id="id" name="id" />
           		 <input type="hidden" class="form-control" id="menu_id" name="AdminRight[menu_id]" value="<?=$menu_id?>" />
-                 
+
           <div id="right_name_div" class="form-group">
               <label for="right_name" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("right_name")?></label>
               <div class="col-sm-10">
@@ -194,8 +194,8 @@ $modelLabel = new \backend\models\AdminRight();
     			<div class="col-sm-10">
     				<select class="form-control" name="SystemFunction[controller]" id="controller">
     				  <option>请选择</option>
-    				<?php 
-    				   
+    				<?php
+
     				  foreach($controllerData as $key=>$data){
     				      echo "<option value='" . $key . "'>". $key."</option>";
     				  }
@@ -208,11 +208,11 @@ $modelLabel = new \backend\models\AdminRight();
 			<div id="actions_div" class="form-group">
     			<label for="actions" class="col-sm-2 control-label">路由地址</label>
     			<div class="col-sm-10">
-    				<div id="treeview"  >	
+    				<div id="treeview"  >
     				</div>
     			</div>
     			<div class="clearfix"><br/></div>
-    		</div>  
+    		</div>
 
           <div id="has_lef_div" class="form-group">
               <label for="has_lef" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("has_lef")?></label>
@@ -253,9 +253,9 @@ $modelLabel = new \backend\models\AdminRight();
               </div>
               <div class="clearfix"></div>
           </div>
-                    
 
-			<?php ActiveForm::end(); ?>          
+
+			<?php ActiveForm::end(); ?>
                 </div>
 			<div class="modal-footer">
 				<a href="#" class="btn btn-default" data-dismiss="modal">关闭</a> <a
@@ -288,7 +288,7 @@ $modelLabel = new \backend\models\AdminRight();
 		$("#create_date").val('');
 		$("#update_user").val('');
 		$("#update_date").val('');
-		
+
 	}
 	else{
 		$("#id").val(data.id);
@@ -355,7 +355,7 @@ $modelLabel = new \backend\models\AdminRight();
 }
 
 function initModel(id, type, fun){
-	
+
 	$.ajax({
 		   type: "GET",
 		   url: "<?=Url::toRoute('admin-right/view')?>",
@@ -382,7 +382,7 @@ function initModel(id, type, fun){
 		   }
 		});
 }
-	
+
 function editAction(id){
 	initModel(id, 'edit');
 }
@@ -428,7 +428,7 @@ function deleteAction(id){
 	else{
 		admin_tool.alert('msg_info', '请先选择要删除的数据', 'warning');
 	}
-    
+
 }
 
 function getSelectedIdValues(formId)
@@ -505,7 +505,7 @@ $('#admin-right-form').bind('submit', function(e) {
 			}
 		}
 	}
-	
+
 	var id = $("#id").val();
 	var action = id == "" ? "<?=Url::toRoute('admin-right/create')?>" : "<?=Url::toRoute('admin-right/update')?>";
     $(this).ajaxSubmit({
@@ -514,7 +514,7 @@ $('#admin-right-form').bind('submit', function(e) {
     	url: action,
     	data:{id:id},
     	data: {"rightUrls":rightUrls},
-    	success: function(value) 
+    	success: function(value)
     	{
         	if(value.errno == 0){
         		$('#edit_dialog').modal('hide');
@@ -525,7 +525,7 @@ $('#admin-right-form').bind('submit', function(e) {
             	var json = value.data;
         		for(var key in json){
         			$('#' + key).attr({'data-placement':'bottom', 'data-content':json[key], 'data-toggle':'popover'}).addClass('popover-show').popover('show');
-        			
+
         		}
         	}
 
@@ -561,7 +561,7 @@ $("#controller").change(function(){
      var nodes = actions.nodes;
      var rightTree = {'text':controller, 'selectable':false, 'state':{'checked':false}, 'type':'r'};
      rightTree['nodes'] = nodes;
-     
+
      $('#treeview').treeview({
 		data: [rightTree],
 		showIcon: false,
@@ -574,7 +574,7 @@ $("#controller").change(function(){
         	changeCheckState(node, false);
         }
 	});
-     
+
 });
 </script>
 <?php $this->endBlock(); ?>
