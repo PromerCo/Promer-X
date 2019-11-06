@@ -1,7 +1,7 @@
 
 <?php
 use yii\widgets\LinkPager;
-use yii\base\Object;
+// use yii\base\Object;
 use yii\bootstrap\ActiveForm;
 use common\utils\CommonFun;
 use yii\helpers\Url;
@@ -20,7 +20,7 @@ $modelLabel = new \backend\models\HubKolPush();
   <div class="row">
     <div class="col-xs-12">
       <div class="box">
-      
+
         <div class="box-header">
           <h3 class="box-title">数据列表</h3>
           <div class="box-tools">
@@ -32,14 +32,14 @@ $modelLabel = new \backend\models\HubKolPush();
           </div>
         </div>
         <!-- /.box-header -->
-        
+
         <div class="box-body">
           <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap table-responsive">
             <!-- row start search-->
           	<div class="row">
           	<div class="col-sm-12">
-                <?php ActiveForm::begin(['id' => 'hub-kol-push-search-form', 'method'=>'get', 'options' => ['class' => 'form-inline'], 'action'=>Url::toRoute('hub-kol-push/index')]); ?>     
-                
+                <?php ActiveForm::begin(['id' => 'hub-kol-push-search-form', 'method'=>'get', 'options' => ['class' => 'form-inline'], 'action'=>Url::toRoute('hub-kol-push/index')]); ?>
+
                   <div class="form-group" style="margin: 5px;">
                       <label><?=$modelLabel->getAttributeLabel('id')?>:</label>
                       <input type="text" class="form-control" id="query[id]" name="query[id]"  value="<?=isset($query["id"]) ? $query["id"] : "" ?>">
@@ -47,19 +47,19 @@ $modelLabel = new \backend\models\HubKolPush();
               <div class="form-group">
               	<a onclick="searchAction()" class="btn btn-primary btn-sm" href="#"> <i class="glyphicon glyphicon-zoom-in icon-white"></i>搜索</a>
            	  </div>
-               <?php ActiveForm::end(); ?> 
+               <?php ActiveForm::end(); ?>
             </div>
           	</div>
           	<!-- row end search -->
-          	
+
           	<!-- row start -->
           	<div class="row">
           	<div class="col-sm-12">
           	<table id="data_table" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="data_table_info">
             <thead class="text-nowrap">
             <tr role="row">
-            
-            <?php 
+
+            <?php
               $orderby = isset($_GET['orderby']) ? $_GET['orderby'] : '';
 		      echo '<th><input id="data_table_check" type="checkbox"></th>';
               echo '<th onclick="orderby(\'id\', \'desc\')" '.CommonFun::sortClass($orderby, 'id').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('id').'</th>';
@@ -80,14 +80,14 @@ $modelLabel = new \backend\models\HubKolPush();
               echo '<th onclick="orderby(\'expire_time\', \'desc\')" '.CommonFun::sortClass($orderby, 'expire_time').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('expire_time').'</th>';
               echo '<th onclick="orderby(\'create_date\', \'desc\')" '.CommonFun::sortClass($orderby, 'create_date').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('create_date').'</th>';
               echo '<th onclick="orderby(\'update_time\', \'desc\')" '.CommonFun::sortClass($orderby, 'update_time').' tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('update_time').'</th>';
-         
+
 			?>
-	
+
             <th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >操作</th>
             </tr>
             </thead>
             <tbody>
-            
+
             <?php
             foreach ($models as $model) {
                 echo '<tr id="rowid_' . $model->id . '">';
@@ -100,7 +100,8 @@ $modelLabel = new \backend\models\HubKolPush();
                 echo '  <td>' . $model->platform . '</td>';
                 echo '  <td>' . $model->tags . '</td>';
                 echo '  <td>' . $model->follow_level . '</td>';
-                echo '  <td>' . $model->describe . '</td>';
+                // echo '  <td>' . $model->describe . '</td>';
+                echo '  <td>' . null . '</td>';
                 echo '  <td>' . $model->type . '</td>';
                 echo '  <td>' . $model->convene . '</td>';
 //                echo '  <td>' . $model->bystander . '</td>';
@@ -117,18 +118,18 @@ $modelLabel = new \backend\models\HubKolPush();
                 echo '  </td>';
                 echo '</tr>';
             }
-            
+
             ?>
-            
-           
-           
+
+
+
             </tbody>
             <!-- <tfoot></tfoot> -->
           </table>
           </div>
           </div>
           <!-- row end -->
-          
+
           <!-- row start -->
           <div class="row">
           	<div class="col-sm-5">
@@ -145,8 +146,8 @@ $modelLabel = new \backend\models\HubKolPush();
               	    'prevPageLabel' => '«',
               	    'firstPageLabel' => '首页',
               	    'lastPageLabel' => '尾页',
-              	]); ?>	
-              	
+              	]); ?>
+
               	</div>
           	</div>
 		  </div>
@@ -172,8 +173,8 @@ $modelLabel = new \backend\models\HubKolPush();
 				<h3>Settings</h3>
 			</div>
 			<div class="modal-body">
-                <?php $form = ActiveForm::begin(["id" => "hub-kol-push-form", "class"=>"form-horizontal", "action"=>Url::toRoute("hub-kol-push/save")]); ?>                      
-                 
+                <?php $form = ActiveForm::begin(["id" => "hub-kol-push-form", "class"=>"form-horizontal", "action"=>Url::toRoute("hub-kol-push/save")]); ?>
+
           <input type="hidden" class="form-control" id="id" name="id" />
 
           <div id="hub_id_div" class="form-group">
@@ -311,9 +312,9 @@ $modelLabel = new \backend\models\HubKolPush();
               </div>
               <div class="clearfix"></div>
           </div>
-                    
 
-			<?php ActiveForm::end(); ?>          
+
+			<?php ActiveForm::end(); ?>
                 </div>
 			<div class="modal-footer">
 				<a href="#" class="btn btn-default" data-dismiss="modal">关闭</a> <a
@@ -329,11 +330,11 @@ function orderby(field, op){
 	 var url = window.location.search;
 	 var optemp = field + " desc";
 	 if(url.indexOf('orderby') != -1){
-		 url = url.replace(/orderby=([^&?]*)/ig,  function($0, $1){ 
+		 url = url.replace(/orderby=([^&?]*)/ig,  function($0, $1){
 			 var optemp = field + " desc";
 			 optemp = decodeURI($1) != optemp ? optemp : field + " asc";
 			 return "orderby=" + optemp;
-		   }); 
+		   });
 	 }
 	 else{
 		 if(url.indexOf('?') != -1){
@@ -343,7 +344,7 @@ function orderby(field, op){
 			 url = url + "?orderby=" + encodeURI(optemp);
 		 }
 	 }
-	 window.location.href=url; 
+	 window.location.href=url;
  }
  function searchAction(){
 		$('#hub-kol-push-search-form').submit();
@@ -372,7 +373,7 @@ function orderby(field, op){
         $("#expire_time").val("");
         $("#create_date").val("");
         $("#update_time").val("");
-	
+
 	}
 	else{
     	        $("#id").val(data.id)
@@ -440,7 +441,7 @@ function orderby(field, op){
 }
 
 function initModel(id, type, fun){
-	
+
 	$.ajax({
 		   type: "GET",
 		   url: "<?=Url::toRoute('hub-kol-push/view')?>",
@@ -457,7 +458,7 @@ function initModel(id, type, fun){
    		   }
 		});
 }
-	
+
 function editAction(id){
 	initModel(id, 'edit');
 }
@@ -503,7 +504,7 @@ function deleteAction(id){
 	else{
 		admin_tool.alert('msg_info', '请先选择要删除的数据', 'warning');
 	}
-    
+
 }
 
 function getSelectedIdValues(formId)
@@ -547,7 +548,7 @@ $('#hub-kol-push-form').bind('submit', function(e) {
     	type: "post",
     	dataType:"json",
     	url: action,
-    	success: function(value) 
+    	success: function(value)
     	{
         	if(value.errno == 0){
         		$('#edit_dialog').modal('hide');
@@ -558,7 +559,7 @@ $('#hub-kol-push-form').bind('submit', function(e) {
             	var json = value.data;
         		for(var key in json){
         			$('#' + key).attr({'data-placement':'bottom', 'data-content':json[key], 'data-toggle':'popover'}).addClass('popover-show').popover('show');
-        			
+
         		}
         	}
 
