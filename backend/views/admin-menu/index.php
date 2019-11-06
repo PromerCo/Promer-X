@@ -1,7 +1,7 @@
 
 <?php
 use yii\widgets\LinkPager;
-use yii\base\Object;
+// use yii\base\Object;
 use yii\bootstrap\ActiveForm;
 use backend\models\AdminMenu;
 use yii\helpers\Url;
@@ -17,7 +17,7 @@ $modelLabel = new \backend\models\AdminMenu();
   <div class="row">
     <div class="col-xs-12">
       <div class="box">
-      
+
         <div class="box-header">
           <h3 class="box-title">子菜单管理</h3>
           <div class="box-tools">
@@ -29,7 +29,7 @@ $modelLabel = new \backend\models\AdminMenu();
           </div>
         </div>
         <!-- /.box-header -->
-        
+
         <div class="box-body">
           <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
             <!-- row start search-->
@@ -49,19 +49,19 @@ $modelLabel = new \backend\models\AdminMenu();
               <div class="form-group">
               	<a onclick="searchAction()" class="btn btn-primary btn-sm" href="#"> <i class="glyphicon glyphicon-zoom-in icon-white"></i>搜索</a>
            	  </div>
-               <?php ActiveForm::end(); ?> 
+               <?php ActiveForm::end(); ?>
             </div>
           	</div>
           	<!-- row end search -->
-          	
+
           	<!-- row start -->
           	<div class="row">
           	<div class="col-sm-12">
           	<table id="data_table" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="data_table_info">
             <thead>
             <tr role="row">
-            
-            <?php 
+
+            <?php
 		      echo '<th><input id="data_table_check" type="checkbox"></th>';
               echo '<th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('id').'</th>';
               echo '<th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('code').'</th>';
@@ -73,14 +73,14 @@ $modelLabel = new \backend\models\AdminMenu();
               echo '<th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('entry_url').'</th>';
               echo '<th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('update_user').'</th>';
               echo '<th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >'.$modelLabel->getAttributeLabel('update_date').'</th>';
-         
+
 			?>
-	
+
             <th tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-sort="ascending" >操作</th>
             </tr>
             </thead>
             <tbody>
-            
+
             <?php
             $row = 0;
             foreach ($models as $model) {
@@ -110,18 +110,18 @@ $modelLabel = new \backend\models\AdminMenu();
                 echo '  </td>';
                 echo '<tr/>';
             }
-            
+
             ?>
-            
-           
-           
+
+
+
             </tbody>
             <!-- <tfoot></tfoot> -->
           </table>
           </div>
           </div>
           <!-- row end -->
-          
+
           <!-- row start -->
           <div class="row">
           	<div class="col-sm-5">
@@ -138,8 +138,8 @@ $modelLabel = new \backend\models\AdminMenu();
               	    'prevPageLabel' => '上一页',
               	    'firstPageLabel' => '首页',
               	    'lastPageLabel' => '尾页',
-              	]); ?>	
-              	
+              	]); ?>
+
               	</div>
           	</div>
 		  </div>
@@ -165,10 +165,10 @@ $modelLabel = new \backend\models\AdminMenu();
 				<h3>子菜单管理</h3>
 			</div>
 			<div class="modal-body">
-                <?php $form = ActiveForm::begin(["id" => "admin-menu-form", "class"=>"form-horizontal", "action"=>Url::toRoute('admin-menu/save')]); ?>                      
+                <?php $form = ActiveForm::begin(["id" => "admin-menu-form", "class"=>"form-horizontal", "action"=>Url::toRoute('admin-menu/save')]); ?>
                  <input type="hidden" class="form-control" id="id" name="AdminMenu[id]" />
-                 <input type="hidden" class="form-control" id="module_id" name="AdminMenu[module_id]" value="<?=$module_id?>">                    
-          
+                 <input type="hidden" class="form-control" id="module_id" name="AdminMenu[module_id]" value="<?=$module_id?>">
+
 
           <div id="code_div" class="form-group">
               <label for="code" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("code")?></label>
@@ -185,7 +185,7 @@ $modelLabel = new \backend\models\AdminMenu();
               </div>
               <div class="clearfix"></div>
           </div>
-<!-- 
+<!--
           <div id="module_id_div" class="form-group">
               <label for="module_id" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("module_id")?></label>
               <div class="col-sm-10">
@@ -217,7 +217,7 @@ $modelLabel = new \backend\models\AdminMenu();
               </div>
               <div class="clearfix"></div>
           </div>
-<!-- 
+<!--
           <div id="entry_right_name_div" class="form-group">
               <label for="entry_right_name" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("entry_right_name")?></label>
               <div class="col-sm-10">
@@ -239,7 +239,7 @@ $modelLabel = new \backend\models\AdminMenu();
               <div class="col-sm-10">
               	<select class="form-control" name="AdminMenu[controller]" id="controller">
 					<option>请选择</option>
-    				<?php 	   
+    				<?php
 					  foreach($controllerData as $key=>$data){
 					      echo "<option value='" . $key . "'>". $key."</option>";
 					  }
@@ -248,7 +248,7 @@ $modelLabel = new \backend\models\AdminMenu();
               </div>
               <div class="clearfix"></div>
           </div>
-          
+
           <div id="action_div" class="form-group">
               <label for="action" class="col-sm-2 control-label"><?php echo $modelLabel->getAttributeLabel("action")?></label>
               <div class="col-sm-10">
@@ -299,9 +299,9 @@ $modelLabel = new \backend\models\AdminMenu();
               </div>
               <div class="clearfix"></div>
           </div>
-                    
 
-			<?php ActiveForm::end(); ?>          
+
+			<?php ActiveForm::end(); ?>
                 </div>
 			<div class="modal-footer">
 				<a href="#" class="btn btn-default" data-dismiss="modal">关闭</a> <a
@@ -339,7 +339,7 @@ $modelLabel = new \backend\models\AdminMenu();
 		$("#create_date").val('');
 		$("#update_user").val('');
 		$("#update_date").val('');
-		
+
 	}
 	else{
 		$("#id").val(data.id);
@@ -412,7 +412,7 @@ $modelLabel = new \backend\models\AdminMenu();
 }
 
 function initModel(id, type, fun){
-	
+
 	$.ajax({
 		   type: "GET",
 		   url: "<?=Url::toRoute('admin-menu/view')?>",
@@ -427,7 +427,7 @@ function initModel(id, type, fun){
 		   }
 		});
 }
-	
+
 function editAction(id){
 	initModel(id, 'edit');
 }
@@ -473,7 +473,7 @@ function deleteAction(id){
 	else{
 		admin_tool.alert('msg_info', '请先选择要删除的数据', 'warning');
 	}
-    
+
 }
 
 function getSelectedIdValues(formId)
@@ -518,7 +518,7 @@ $('#admin-menu-form').bind('submit', function(e) {
     	dataType:"json",
     	url: action,
     	data:{id:id},
-    	success: function(value) 
+    	success: function(value)
     	{
         	if(value.errno == 0){
         		$('#edit_dialog').modal('hide');
@@ -529,7 +529,7 @@ $('#admin-menu-form').bind('submit', function(e) {
             	var json = value.data;
         		for(var key in json){
         			$('#' + key).attr({'data-placement':'bottom', 'data-content':json[key], 'data-toggle':'popover'}).addClass('popover-show').popover('show');
-        			
+
         		}
         	}
 
@@ -550,6 +550,6 @@ $("#controller").change(function(){
          $("#action").append(option);
      }
 });
- 
+
 </script>
 <?php $this->endBlock(); ?>
